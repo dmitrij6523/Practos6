@@ -1,0 +1,14 @@
+Console.WriteLine("Ввод строки");
+string input = Console.ReadLine();
+
+// Разделение строки
+string[] words = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries); //Игнорирование лишних пробелов
+
+// Разворот слов
+Array.Reverse(words);
+
+// Объединие слов
+string result = string.Join(" ", words);
+
+Console.WriteLine("Результат");
+Console.WriteLine(result);
