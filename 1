@@ -1,0 +1,22 @@
+char C = Console.ReadKey().KeyChar; // Чтение символа
+Console.WriteLine(); // Переход
+
+if (char.IsDigit(C))
+{
+    Console.WriteLine("digit");
+}
+else if (char.IsLetter(C))
+{
+    if (C >= 'A' && C <= 'Z' || C >= 'a' && C <= 'z')
+    {
+        Console.WriteLine("lat");
+    }
+    else if (C >= 'А' && C <= 'Я' || C >= 'а' && C <= 'я')
+    {
+        Console.WriteLine("rus");
+    }
+}
+else
+{
+    Console.WriteLine("Не верный ввод");
+}
