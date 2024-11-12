@@ -1,0 +1,24 @@
+// Ввод строк S и S0
+Console.WriteLine("Ввод S");
+string S = Console.ReadLine();
+Console.WriteLine("Ввод S0");
+string S0 = Console.ReadLine();
+// Удаление всех подстрок S0
+string result = RemoveSubstrings(S, S0);
+// Вывод результата
+Console.WriteLine("Результат:");
+Console.WriteLine(result);
+
+static string RemoveSubstrings(string S, string S0)
+{
+    // Проверка на пустоту S0
+    if (string.IsNullOrEmpty(S0))
+    {
+        return S;
+    }
+
+    // Удаление всех вхождений S0 из S
+    string result = S.Replace(S0, "");
+
+    return result;
+}
