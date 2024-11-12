@@ -1,0 +1,20 @@
+Console.WriteLine("Ввод числа");
+string input = Console.ReadLine();
+
+// Проверка
+if (long.TryParse(input, out long number) && number > 0)
+{
+    int sum = 0;
+
+    // Проверка цифр
+    foreach (char digit in input)
+    {
+        sum += digit - '0'; // Преобразование символа
+    }
+
+    Console.WriteLine($"Сумма {input} равна {sum}.");
+}
+else
+{
+    Console.WriteLine("Невернный ввод");
+}
